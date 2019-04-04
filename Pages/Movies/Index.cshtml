@@ -53,7 +53,7 @@
                 @Html.DisplayFor(modelItem => item.Rating)
             </td>
             <td>
-                
+                @{var avg = Model.Movie.Reviews(s => s.Movie == item.Movie).Average();}
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |

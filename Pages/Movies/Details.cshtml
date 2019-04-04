@@ -41,12 +41,12 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Movie.Rating)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-2" stye="margin-right:14px">
                 @Html.DisplayNameFor(Model => Model.Movie.Reviews)
         </dt>
         @foreach(var r in Model.Movie.Reviews)
         {
-            <dd class="badge badge-primary btn-lg"  stye=text-indent:8em  style=margin:5px>
+            <dd class="badge badge-primary btn-lg"  style="margin-left:10px">
                 <h6>@r.Score/5 </h6> 
             </dd>
         }
