@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace RazorPagesMovie.Models
 {
@@ -26,7 +27,8 @@ namespace RazorPagesMovie.Models
                         ReleaseDate = DateTime.Parse("1989-2-12"),
                         Genre = "Romantic Comedy",
                         Price = 7.99M,
-                        Rating = "R"
+                        Rating = "R",
+                        Reviews = new List<Review> {new Review {Score = 4 }, new Review {Score = 1}}
                     },
 
                     new Movie
@@ -35,7 +37,8 @@ namespace RazorPagesMovie.Models
                         ReleaseDate = DateTime.Parse("1984-3-13"),
                         Genre = "Comedy",
                         Price = 8.99M,
-                        Rating = "PG-13"
+                        Rating = "PG-13",
+                        Reviews = new List<Review> {new Review {Score = 4 }, new Review {Score = 4}}
                     },
 
                     new Movie
@@ -44,7 +47,8 @@ namespace RazorPagesMovie.Models
                         ReleaseDate = DateTime.Parse("1986-2-23"),
                         Genre = "Comedy",
                         Price = 9.99M,
-                        Rating = "PG-13"
+                        Rating = "PG-13",
+                        Reviews = new List<Review> {new Review {Score = 4 }, new Review {Score = 5}}
                     },
 
                     new Movie
@@ -53,7 +57,8 @@ namespace RazorPagesMovie.Models
                         ReleaseDate = DateTime.Parse("1959-4-15"),
                         Genre = "Western",
                         Price = 3.99M,
-                        Rating = "R"
+                        Rating = "R",
+                        Reviews = new List<Review> {}
                     }
                 );
                 context.SaveChanges();
