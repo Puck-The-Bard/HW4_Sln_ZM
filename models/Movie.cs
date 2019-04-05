@@ -35,6 +35,6 @@ namespace RazorPagesMovie.Models
         [Required]
         public string Rating { get; set; }
 
-        public List<Review> Reviews {get; set;}
+        public List<Review> Reviews {get; set;} // each movie is connected to a list of reviews
     }
 }

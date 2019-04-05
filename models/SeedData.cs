@@ -58,7 +58,7 @@ namespace RazorPagesMovie.Models
                         Genre = "Western",
                         Price = 3.99M,
                         Rating = "R",
-                        Reviews = new List<Review> {new Review {Score = 4 }, new Review {Score = 5}}
+                        Reviews = new List<Review> {}
                     }
                 );
                 context.SaveChanges();
