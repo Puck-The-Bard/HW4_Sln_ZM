@@ -12,9 +12,11 @@ namespace RazorPagesMovie.Models
         public int ReviewID {get; set;}
         public Movie Movie {get; set;} //fk each review is connected to one move
 
+        [Required]
         public int ID {get; set;} //nav property
 
         [Range(1, 5)]
+        [Required]
         public int Score {get; set;}
     }
 }
